@@ -37,7 +37,7 @@
 
     <header class="header-background">
         <div class="container header-content">
-            <h1>Einführung in Machine Learning</h1>
+            <h1>Machine Learning – was ist das?</h1>
         </div>
         <div class="arrow-down">
   
@@ -52,19 +52,30 @@
     <section id ="Was ist ML" class="ml-fullscreen">
         <div class="container">
             <div class="ml-text">
-                <h2>Was ist Machine Learning?</h2>
+                <h2>Einführung</h2>
                 <p>
-                    Machine Learning (ML) ist ein Teilbereich von Künstlicher Intelligenz, in dem Algorithmen automatisch lernen, in Daten Muster zu erkennen. Dazu gehören Applikationen wie Google Translate, Bildgeneratoren wie DALL-E oder Chatbots wie ChatGPT. Diese Applikation stellt die erste Aufgabe der meisten ML-Vorlesungen vor: handgeschriebene Ziffern erkennen.  </p>
+                    Machine Learning (ML) ist ein Teilbereich von Künstlicher Intelligenz, in dem Algorithmen automatisch lernen, in Daten Muster zu erkennen. Applikationen, die auf Machine Learning basieren, sind zum Beispiel Google Translate, DALL-E oder ChatGPT. Diese Applikation stellt die erste Aufgabe der meisten ML-Vorlesungen vor: handgeschriebene Ziffern erkennen.  </p>
             </div>
         </div>
     </section>
+        <section id="Filter">
+            <div style="text-align:center;">
+            <img src="../static/filter_explained/Filtererklärung.png" alt="Filter" style="max-width:100%; height:auto;">
+            </div>
+        </section>
+      
+      <section id="Filter Beispiel">
+        <div style="text-align:center;">
+          <img src="../static/filter_explained/Filtererklärung_beispiel.png" alt="Beispielrechnung Filter" style="max-width:100%; height:auto;">
+        </div>
+      </section>
     <main>
         <section id="CNNs verstehen" class="cnn-explanation">
             <div class="container cnn-container">
                 <div class="cnn-text">
                     <h2>Erkennen mit Filtern</h2>
                     <p>
-                        Um das Problem zu lösen, verwendet man ein Convolutional Neural Network (CNN), das sich Filter zunutze macht, um bestimmte Muster zu erkennen. 
+                        Als besonders geeignet, um Muster in Bildern zu erkennen, haben sich Convolutional Neural Networks (CNNs) erwiesen. Sie bestehen aus mehreren Schichten, die nacheinander auf das Bild angewendet werden. Die ersten Schichten machen sich Filter zunutze, um bestimmte Merkmale hervorzuheben.
                     </p>
                 </div>
                 <div class="gif-container">
@@ -97,9 +108,10 @@
                 </div>
             </div>
             <div class="explanation-container">
-                <p>Der rote Ausschnitt ist ein <strong> Filter</strong>, der über die Pixel eines Bildes und seinen umliegenden Nachbarn schreitet, dabei Merkmale wie Kanten oder Kreise erkennt und eine <strong> Merkmalskarte</strong> erstellt.
-                    Auf diese Merkmalskarte werden wiederum Filter angewandt, sodass das Netz zunehmend abstrakte Muster erkennt.
-                    Hier kannst du über die Größe des Filters entscheiden, wie weit er voranschreitet und ob am Rand Pixel hinzugefügt werden, um Randpixel mehr zu berücksichtigen.     
+                <p> In dieser Animation sieht man, wie ein Filter über das Bild wandert und dabei ein neues Bild – eine sogenannte Merkmalskarte – erstellt.
+                    Ein CNN verwendert mehrere Filter, um beispielsweise Kanten, Ecken, Linien oder Farbverläufe zu erkennen.
+                    Hier kannst du über die Größe des Filters entscheiden, wie weit er voranschreitet und ob am Rand Pixel hinzugefügt werden, um Randpixel mehr zu berücksichtigen. 
+                    Deine Entscheidungen haben direkten Einfluss auf die spätere Leistung dieses Netzes.      
                 </p>
             </div>
         </section>
@@ -110,7 +122,7 @@
             <div class="container">
                 <img src="{{ url_for('static', filename='include/CNN Deutsch.png') }}" alt="Optimization Visualization" class="optimization-image">
                 <p>
-                    Mit "lernen" ist in ML optimieren gemeint. Für dieses Beispiel bedeutet das, die richtigen Filter zu ermitteln sowie herauszufinden, welche Merkmale am wichtigsten für die Klassifizierung sind. Zu Beginn sind diese Einstellungen noch zufällig, während des Trainingsprozesses werden sie dann angepasst.
+                    Mit Lernen ist in ML Optimieren gemeint. Für dieses Beispiel bedeutet das, die richtigen Filter zu ermitteln sowie herauszufinden, welche Merkmale am wichtigsten für die Klassifizierung sind. Zu Beginn sind die Einstellungen noch zufällig, während des Trainingsprozesses werden sie dann iterativ angepasst.
             </div>
         </section>
 
